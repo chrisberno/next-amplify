@@ -4,7 +4,8 @@ export default function SSR({ formattedDate }) {
       <>
         <h1>Server-side rendered page</h1>
         <p>
-          This page is server-side rendered. It was rendered on {formattedDate}.
+          This page is server-side rendered. As such, it is updated
+          each time it's called. It was last rendered on {formattedDate}.
         </p>
         <p>
           <a href="/">View a static page.</a>

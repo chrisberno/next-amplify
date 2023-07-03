@@ -4,7 +4,8 @@ export default function Home() {
     
     return (
     <div>
-      <Iframe url="https://admin.connie.one/" allow="camera, microphone"
+      <Iframe url="https://admin.connie.one/" 
+        allow="camera *;microphone *"
         margin='0px'
         width='100%'
         height='100%'

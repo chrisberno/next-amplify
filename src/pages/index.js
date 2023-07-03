@@ -1,22 +1,17 @@
-// pages/index.js
-export default function Home({ formattedDate }) {
-  return (
-    <>
-      <h1>Static page</h1>
-      <p>This page is static. It was built on {formattedDate}.</p>
-      <p>
-        <a href="/ssr">View a server-side rendered page.</a>
-      </p>
-    </>
-  );
-}
-
-export async function getStaticProps() {
-  const buildDate = Date.now();
-  const formattedDate = new Intl.DateTimeFormat("en-US", {
-    dateStyle: "long",
-    timeStyle: "long",
-  }).format(buildDate);
-
-  return { props: { formattedDate } };
+// pages/iframe.js
+import Iframe from 'react-iframe';
+export default function Home() {
+    
+    return (
+    <div>
+      <Iframe url="https://admin.connie.one/"
+        margin='0px'
+        width='100%'
+        height='100%'
+        scrolling='auto'
+        allowFullScreen='true'
+        position='absolute'
+        />
+    </div>
+    )
 }
